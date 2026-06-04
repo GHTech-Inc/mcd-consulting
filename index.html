@@ -250,7 +250,7 @@ nav.solid {
   color: rgba(255,255,255,0.58);
   margin-bottom: 1.4rem;
 }
-.program-copy p:last-of-type { margin-bottom: 2.4rem; }
+.program-copy p:last-of-type { margin-bottom: 1.8rem; }
 .btn-outline {
   display: inline-block;
   font-size: 0.67rem;
@@ -267,6 +267,64 @@ nav.solid {
 .btn-outline:hover {
   background: var(--teal-lt);
   color: var(--ink);
+}
+
+/* ─── RESOURCE LINKS ─── */
+.resource-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 0.5rem;
+}
+.resource-link {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 1.3rem 1.5rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 14px;
+  text-decoration: none;
+  transition: background 0.25s, border-color 0.25s;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.resource-link:hover {
+  background: rgba(74,159,168,0.18);
+  border-color: rgba(74,159,168,0.35);
+}
+.resource-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.2);
+  min-width: 2rem;
+  line-height: 1;
+}
+.resource-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+.resource-title {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.01em;
+}
+.resource-desc {
+  font-size: 0.76rem;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.4);
+}
+.resource-arrow {
+  font-size: 1rem;
+  color: var(--teal-lt);
+  opacity: 0.55;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.resource-link:hover .resource-arrow {
+  opacity: 1;
+  transform: translate(2px, -2px);
 }
 
 /* ─── THREE PILLARS ─── */
@@ -461,7 +519,32 @@ footer {
         <h3>A revolutionary<br>partnership for<br>clean capital access.</h3>
         <p>We have worked with the California IBank loan guarantee program for many years. It is a powerful tool that assists interested lenders by reducing their lending risk — empowering climate entrepreneurs to secure the capital critical for their growth and impact.</p>
         <p>The unique partnership between the California IBank and the Bay Area Air Quality Management District is revolutionary in its impact — opening new avenues of access to capital for Climate Technology businesses to improve community quality of life and create sustainable jobs.</p>
-        <a href="https://www.ibank.ca.gov" target="_blank" rel="noopener" class="btn-outline">Learn About the Program ↗</a>
+        <div class="resource-links">
+          <a href="https://ctf.baaqmd.gov/about" target="_blank" rel="noopener" class="resource-link">
+            <span class="resource-num">01</span>
+            <span class="resource-body">
+              <span class="resource-title">Bay Area Air District — Climate Tech Finance Team</span>
+              <span class="resource-desc">Meet the full team behind the program and see the Air District's commitment to clean tech financing.</span>
+            </span>
+            <span class="resource-arrow">↗</span>
+          </a>
+          <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7460691885494472704/" target="_blank" rel="noopener" class="resource-link">
+            <span class="resource-num">02</span>
+            <span class="resource-body">
+              <span class="resource-title">Stearns Bank — Program Feature</span>
+              <span class="resource-desc">See how Stearns Bank is publicly advertising their participation in the Climate Tech Finance program.</span>
+            </span>
+            <span class="resource-arrow">↗</span>
+          </a>
+          <a href="https://ibank.ca.gov/" target="_blank" rel="noopener" class="resource-link">
+            <span class="resource-num">03</span>
+            <span class="resource-body">
+              <span class="resource-title">California IBank</span>
+              <span class="resource-desc">The state infrastructure bank behind the loan guarantee program that reduces lender risk and empowers climate entrepreneurs.</span>
+            </span>
+            <span class="resource-arrow">↗</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
