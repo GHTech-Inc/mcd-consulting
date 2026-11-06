@@ -91,14 +91,15 @@ nav.solid {
   position: absolute; inset: 0;
   background: linear-gradient(
     160deg,
-    rgba(26,30,34,0.08) 0%,
-    rgba(26,30,34,0.0) 35%,
-    rgba(26,30,34,0.55) 70%,
-    rgba(26,30,34,0.88) 100%
+    rgba(26,30,34,0.0) 0%,
+    rgba(26,30,34,0.0) 45%,
+    rgba(26,30,34,0.28) 72%,
+    rgba(26,30,34,0.6) 100%
   );
 }
 .hero-body {
   position: relative; z-index: 2;
+  text-shadow: 0 1px 14px rgba(26,30,34,0.45);
   padding: 0 3.5rem 5rem;
   max-width: 760px;
 }
@@ -107,7 +108,7 @@ nav.solid {
   font-size: 0.65rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--teal-lt);
+  color: rgba(255,255,255,0.92);
   margin-bottom: 1.6rem;
   opacity: 0; animation: rise 0.9s 0.2s ease forwards;
 }
@@ -123,7 +124,7 @@ nav.solid {
   margin-bottom: 1.8rem;
   opacity: 0; animation: rise 1s 0.4s ease forwards;
 }
-.hero h1 i { font-style: italic; color: rgba(255,255,255,0.75); }
+.hero h1 i { font-style: italic; color: rgba(255,255,255,0.85); }
 .hero-line {
   width: 2.5rem; height: 1px;
   background: var(--teal-lt);
@@ -134,7 +135,7 @@ nav.solid {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.75;
-  color: rgba(255,255,255,0.72);
+  color: rgba(255,255,255,0.9);
   max-width: 500px;
   margin-bottom: 2.4rem;
   opacity: 0; animation: rise 0.9s 0.8s ease forwards;
@@ -370,6 +371,36 @@ nav.solid {
   transition: color 0.3s;
 }
 
+/* ─── CLIMATE TECH FINANCE ─── */
+.ctf-block + .ctf-block { margin-top: 5.5rem; }
+.ctf-stats {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 2px;
+  background: var(--stone);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 3.5rem;
+}
+.ctf-stat {
+  background: var(--white);
+  padding: 2.2rem 2rem;
+}
+.ctf-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: var(--teal);
+  line-height: 1;
+  margin-bottom: 0.7rem;
+}
+.ctf-stat-text {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--slate);
+}
+.intro-right a { color: var(--teal); }
+
 /* ─── CONTACT ─── */
 .contact-grid {
   display: grid;
@@ -497,7 +528,7 @@ footer {
         <h2>Consultants at the<br>intersection of <em>capital</em><br>and clean technology.</h2>
       </div>
       <div class="intro-right">
-        <p>As consultants focused on the small business space and the rapidly growing Climate Tech industry, our intent is to bridge the gap between climate-driven businesses seeking working capital and banks and other financiers interested in participating in the growing clean tech sector.</p>
+        <p>As consultants focused on the small business space and the rapidly growing Climate Tech industry, our intent is to bridge the gap between climate-driven businesses seeking working capital and banks and other financiers interested in participating in the growing clean tech sector, and in support of business generally.</p>
         <p>We are mission driven — committed to improving business access to the capital necessary for them to grow and prosper in challenging areas, and to scale ambitious technologies that can meaningfully improve quality of life for all. The Climate Tech sector is crucial for the future prosperity of our communities and our planet.</p>
       </div>
     </div>
@@ -518,7 +549,7 @@ footer {
         <p class="label">California IBank &amp; Bay Area Air District</p>
         <h3>A revolutionary<br>partnership for<br>clean capital access.</h3>
         <p>We have worked with the California IBank loan guarantee program for many years. It is a powerful tool that assists interested lenders by reducing their lending risk — empowering climate entrepreneurs to secure the capital critical for their growth and impact.</p>
-        <p>The unique partnership between the California IBank and the Bay Area Air Quality Management District is revolutionary in its impact — opening new avenues of access to capital for Climate Technology businesses to improve community quality of life and create sustainable jobs.</p>
+        <p>We led the unique partnership between the California IBank and the Bay Area Air District from its inception — opening new avenues of access to capital for Climate Tech businesses to improve community quality of life and to create sustainable jobs.</p>
         <div class="resource-links">
           <a href="https://ctf.baaqmd.gov/about" target="_blank" rel="noopener" class="resource-link">
             <span class="resource-num">01</span>
@@ -545,6 +576,56 @@ footer {
             <span class="resource-arrow">↗</span>
           </a>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- CLIMATE TECH FINANCE -->
+<section class="section" id="climate-tech-finance">
+  <div class="inner">
+    <!-- OUR STORY -->
+    <div class="ctf-block intro-grid reveal">
+      <div class="intro-left">
+        <p class="label">Climate Tech Finance · Our Story</p>
+        <h2>Bridging the<br><em>&ldquo;Valley of Death&rdquo;</em><br>in climate finance.</h2>
+      </div>
+      <div class="intro-right">
+        <p>The Climate Tech Finance Team bridges the proverbial financing &ldquo;Valley of Death&rdquo; in part by utilizing the state loan guarantee program to de-risk a bank lender&rsquo;s risk level to manageable proportions. The guarantee program has been utilized independently by the Climate Tech Team Principals hundreds of times since 1988 to assist businesses requiring both this risk mitigation tool and the counsel to present their business in the most positive manner, identifying their strengths and weaknesses in a commercially acceptable fashion. The objective is to secure adequate &ldquo;friendly&rdquo; non-dilutive capital from commercial banks.</p>
+      </div>
+    </div>
+
+    <!-- OUR IMPACT -->
+    <div class="ctf-block reveal" id="impact">
+      <div class="intro-grid">
+        <div class="intro-left">
+          <p class="label">Our Impact</p>
+          <h2>A proven record<br>of <em>capital</em> at work.</h2>
+        </div>
+        <div class="intro-right">
+          <p>The Climate Tech Finance Team Principals have built a cadre of 20 commercial banks in California and nationally which are participating in the financing of our selected Climate Tech Firms.</p>
+          <p>The Team Principals have also developed a loan portfolio of $60 million over 29 early stage and startup borrowers while realizing a loss of only $600,000 in one borrower. In addition, the Team has developed a significant pipeline of Climate Tech and other projects both statewide and nationally requiring our specialized and focused financing approach. The technologies involved range from solar to wind, biomass, energy storage, microgrids and other impactful projects.</p>
+        </div>
+      </div>
+      <div class="ctf-stats">
+        <div class="ctf-stat"><div class="ctf-stat-num">20</div><div class="ctf-stat-text">Participating commercial banks, in California and nationally</div></div>
+        <div class="ctf-stat"><div class="ctf-stat-num">$60M</div><div class="ctf-stat-text">Loan portfolio developed by the Team Principals</div></div>
+        <div class="ctf-stat"><div class="ctf-stat-num">29</div><div class="ctf-stat-text">Early stage and startup borrowers financed</div></div>
+        <div class="ctf-stat"><div class="ctf-stat-num">1</div><div class="ctf-stat-text">Borrower loss across the entire portfolio</div></div>
+      </div>
+    </div>
+
+    <!-- FUTURE -->
+    <div class="ctf-block intro-grid reveal" id="future">
+      <div class="intro-left">
+        <p class="label">Future</p>
+        <h2>Expanding <em>statewide</em><br>and nationally.</h2>
+      </div>
+      <div class="intro-right">
+        <p>The operating and financing results realized in this portfolio are very impressive and the loss record has been extraordinary. The success of the financing model utilized by the CTF Team is based on the years of financing and operational experience of the Firm&rsquo;s Principals, and the assembly of the cadre of commercial banks involved is also a result of the relationships developed over their years of experience. A key element is to know the lenders and their institutional practices, their credit and business cultures, and their strategic business objectives.</p>
+        <p>It is our intent to expand both our Climate Tech Finance and our general commercial lending business in California and nationally as well. We invite all interested parties to contact us at our Principals&rsquo; email addresses <a href="#contact">shown below</a>.</p>
       </div>
     </div>
   </div>
