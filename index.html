@@ -744,16 +744,8 @@ footer {
         <p>We have worked with the California IBank loan guarantee program for many years. It is a powerful tool that assists interested lenders by reducing their lending risk — empowering climate entrepreneurs to secure the capital critical for their growth and impact.</p>
         <p>We led the unique partnership between the California IBank and the Bay Area Air District from its inception — opening new avenues of access to capital for Climate Tech businesses to improve community quality of life and to create sustainable jobs.</p>
         <div class="resource-links">
-          <a href="https://ctf.baaqmd.gov/about" target="_blank" rel="noopener" class="resource-link">
-            <span class="resource-num">01</span>
-            <span class="resource-body">
-              <span class="resource-title">Bay Area Air District — Climate Tech Finance Team</span>
-              <span class="resource-desc">Meet the full team behind the program and see the Air District's commitment to clean tech financing.</span>
-            </span>
-            <span class="resource-arrow">↗</span>
-          </a>
           <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7460691885494472704/" target="_blank" rel="noopener" class="resource-link">
-            <span class="resource-num">02</span>
+            <span class="resource-num">01</span>
             <span class="resource-body">
               <span class="resource-title">Stearns Bank — Program Feature</span>
               <span class="resource-desc">See how Stearns Bank is publicly advertising their participation in the Climate Tech Finance program.</span>
@@ -761,7 +753,7 @@ footer {
             <span class="resource-arrow">↗</span>
           </a>
           <a href="https://ibank.ca.gov/" target="_blank" rel="noopener" class="resource-link">
-            <span class="resource-num">03</span>
+            <span class="resource-num">02</span>
             <span class="resource-body">
               <span class="resource-title">California IBank</span>
               <span class="resource-desc">The state infrastructure bank behind the loan guarantee program that reduces lender risk and empowers climate entrepreneurs.</span>
@@ -925,7 +917,7 @@ footer {
       <div class="pillar reveal reveal-delay-2">
         <div class="pillar-num">03</div>
         <div class="pillar-title">Program Navigation</div>
-        <p class="pillar-text">From the California IBank to the Bay Area Air District partnership, we have deep working knowledge of the programs available — and the relationships to move things forward.</p>
+        <p class="pillar-text">From the California IBank to the National CDFI Community and the Commercial Banking Community, we have deep working knowledge of the programs available — and the relationships to move things forward.</p>
       </div>
     </div>
   </div>
@@ -963,6 +955,13 @@ footer {
 </footer>
 
 <script>
+  // Always open the site at the top, not wherever the browser last left off
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  window.scrollTo(0, 0);
+  window.addEventListener('load', () => window.scrollTo(0, 0));
+  window.addEventListener('pageshow', (e) => { if (e.persisted) window.scrollTo(0, 0); });
+
   // Nav on scroll
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
