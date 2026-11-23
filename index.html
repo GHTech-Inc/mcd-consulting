@@ -922,10 +922,13 @@ footer {
 <!-- FOOTER -->
 <footer>
   <div class="foot-mark">MCD <span>Consulting</span></div>
-  <p class="foot-copy">© 2025 MCD Consulting. Bay Area, California.</p>
+  <p class="foot-copy">© <span id="year">2026</span> MCD Consulting. Bay Area, California.</p>
 </footer>
 
 <script>
+  // Footer copyright year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
   // Always open the site at the top, not wherever the browser last left off
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   if (location.hash) history.replaceState(null, '', location.pathname + location.search);
