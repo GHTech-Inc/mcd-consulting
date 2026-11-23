@@ -21,7 +21,6 @@ html { scroll-behavior: smooth; font-size: 16px; }
   --ink:     #1a1e22;
   --teal:    #2e7d85;
   --teal-lt: #4a9fa8;
-  --gold:    #c8923a;
 }
 
 body {
@@ -190,18 +189,17 @@ nav.solid {
   gap: 7rem;
   align-items: start;
 }
-.intro-left h2 {
+.intro-left h2,
+.team-head h2 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
   font-size: clamp(2.2rem, 3.5vw, 3.1rem);
   line-height: 1.22;
   color: var(--ink);
-  margin-bottom: 2.5rem;
 }
-.intro-left h2 em {
-  font-style: italic;
-  color: var(--teal);
-}
+.intro-left h2 { margin-bottom: 2.5rem; }
+.intro-left h2 em,
+.team-head h2 em { font-style: italic; color: var(--teal); }
 .intro-right p {
   font-size: 0.975rem;
   line-height: 1.85;
@@ -209,6 +207,7 @@ nav.solid {
   margin-bottom: 1.4rem;
 }
 .intro-right p:last-child { margin-bottom: 0; }
+.intro-right a { color: var(--teal); }
 
 /* ─── DIVIDER ─── */
 .rule {
@@ -236,8 +235,8 @@ nav.solid {
   flex-direction: column;
   justify-content: center;
 }
+.program-label { margin-bottom: 2.5rem; }
 .program-copy .label { color: var(--teal-lt); }
-.program-copy .label::before { background: var(--teal-lt); }
 .program-copy h3 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
@@ -253,23 +252,6 @@ nav.solid {
   margin-bottom: 1.4rem;
 }
 .program-copy p:last-of-type { margin-bottom: 1.8rem; }
-.btn-outline {
-  display: inline-block;
-  font-size: 0.67rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--teal-lt);
-  border: 1px solid var(--teal-lt);
-  padding: 0.8rem 1.8rem;
-  border-radius: 100px;
-  text-decoration: none;
-  transition: background 0.25s, color 0.25s;
-  align-self: flex-start;
-}
-.btn-outline:hover {
-  background: var(--teal-lt);
-  color: var(--ink);
-}
 
 /* ─── RESOURCE LINKS ─── */
 .resource-links {
@@ -329,16 +311,17 @@ nav.solid {
   transform: translate(2px, -2px);
 }
 
-/* ─── THREE PILLARS ─── */
-.pillars {
+/* ─── SERVICES (shares tile-grid look with .ctf-stats) ─── */
+.pillars,
+.ctf-stats {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
   gap: 2px;
   background: var(--stone);
   border-radius: 20px;
   overflow: hidden;
   margin-top: 3.5rem;
 }
+.pillars { grid-template-columns: repeat(2,1fr); }
 .pillar {
   background: var(--white);
   padding: 2.8rem 2.4rem;
@@ -374,15 +357,7 @@ nav.solid {
 
 /* ─── CLIMATE TECH FINANCE ─── */
 .ctf-block + .ctf-block { margin-top: 5.5rem; }
-.ctf-stats {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 2px;
-  background: var(--stone);
-  border-radius: 20px;
-  overflow: hidden;
-  margin-top: 3.5rem;
-}
+.ctf-stats { grid-template-columns: repeat(4,1fr); }
 .ctf-stat {
   background: var(--white);
   padding: 2.2rem 2rem;
@@ -400,17 +375,8 @@ nav.solid {
   line-height: 1.6;
   color: var(--slate);
 }
-.intro-right a { color: var(--teal); }
 
 /* ─── TEAM ─── */
-.team-head h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 400;
-  font-size: clamp(2.2rem, 3.5vw, 3.1rem);
-  line-height: 1.22;
-  color: var(--ink);
-}
-.team-head h2 em { font-style: italic; color: var(--teal); }
 .team-list {
   display: flex;
   flex-direction: column;
@@ -707,7 +673,7 @@ footer {
     <p class="hero-kicker">Bay Area · Climate Finance</p>
     <h1>Bridging capital<br>to <i>climate-driven</i><br>business.</h1>
     <div class="hero-line"></div>
-    <p class="hero-lead">We connect small climate-tech businesses with the working capital they need to grow — and help lenders participate confidently in the clean energy economy.</p>
+    <p class="hero-lead">We connect climate-tech businesses with the working capital they need to grow — and help lenders participate confidently in the clean energy economy.</p>
     <a href="#mission" class="hero-cta">Learn More</a>
   </div>
 </section>
@@ -734,7 +700,7 @@ footer {
 <section class="section" id="program">
   <div class="inner">
     <div class="reveal">
-      <p class="label" style="margin-bottom:2.5rem;">Featured Program</p>
+      <p class="label program-label">Featured Program</p>
     </div>
     <div class="program-grid reveal reveal-delay-1">
       <div class="program-photo"></div>
@@ -919,6 +885,11 @@ footer {
         <div class="pillar-title">Program Navigation</div>
         <p class="pillar-text">From the California IBank to the National CDFI Community and the Commercial Banking Community, we have deep working knowledge of the programs available — and the relationships to move things forward.</p>
       </div>
+      <div class="pillar reveal reveal-delay-3">
+        <div class="pillar-num">04</div>
+        <div class="pillar-title">Gigaproject Finance</div>
+        <p class="pillar-text">We help developers of large-scale infrastructure projects build a financing strategy that matches the scale of their vision. We structure debt financing, build a compelling case for lenders, and represent project sponsors from initial discussions through due diligence and financing close. In addition, our team brings decades of experience in large-scale construction and infrastructure projects, along with a network of national and global lending relationships.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -951,10 +922,13 @@ footer {
 <!-- FOOTER -->
 <footer>
   <div class="foot-mark">MCD <span>Consulting</span></div>
-  <p class="foot-copy">© 2025 MCD Consulting. Bay Area, California.</p>
+  <p class="foot-copy">© <span id="year">2026</span> MCD Consulting. Bay Area, California.</p>
 </footer>
 
 <script>
+  // Footer copyright year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
   // Always open the site at the top, not wherever the browser last left off
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   if (location.hash) history.replaceState(null, '', location.pathname + location.search);
